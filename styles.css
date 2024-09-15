@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    animation: moveAround 8s linear infinite;
+}
+
+@keyframes moveAround {
+    0% {
+        top: 0;
+        left: 0;
+        background-color: red;
+    }
+    25% {
+        top: 0;
+        left: calc(100vw - 100px);
+        background-color: blue;
+    }
+    50% {
+        top: calc(100vh - 100px);
+        left: calc(100vw - 100px);
+        background-color: green;
+    }
+    75% {
+        top: calc(100vh - 100px);
+        left: 0;
+        background-color: yellow;
+    }
+    100% {
+        top: 0;
+        left: 0;
+        background-color: red;
+    }
+}
